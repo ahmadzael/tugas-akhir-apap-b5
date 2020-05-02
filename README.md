@@ -7,9 +7,9 @@ Anggota Kelompok :
 
 -Nouval Ainun Najib - 1806269783
 
--Wiyata Mandala Putra - 1806269833
-
 -Tommy Aji Prabowo - 1806269820
+
+-Wiyata Mandala Putra - 1806269833
 
 
                     
