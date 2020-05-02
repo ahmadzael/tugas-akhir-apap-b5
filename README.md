@@ -5,11 +5,11 @@ Anggota Kelompok :
 
 -Ahmad Jaelani Sidiq -1806269594
 
--Nouval Ainun Najib - 1806269783
+-Nouval Ainun Nadjib - 1806269783
 
 -Tommy Aji Prabowo - 1806269820
 
--Wiyata Mandala Putra - 1806269833
+-Wiyata Mandalaputra - 1806269833
 
 
                     
@@ -18,27 +18,27 @@ Kontrak Tahap 1 Tugas Akhir
 NPM  | Nama Lengkap | Fitur Yang diselesaikan
 ------------- | ------------- |-------------
 Ahmad Jaelani Sidiq  | 1806269594 | 16
-Nouval Ainun Najib  |  1806269783 | 14
+Nouval Ainun Nadjib  |  1806269783 | 14
 Tommy Aji Prabowo | 1806269820 | 2 , 3
-Wiyata Mandala Putra  | 1806269833 | 17
+Wiyata Mandalaputra  | 1806269833 | 17
 
 Kontrak Tahap 2 Tugas Akhir
                     
 NPM  | Nama Lengkap | Fitur Yang diselesaikan
 ------------- | ------------- |-------------
 Ahmad Jaelani Sidiq  | 1806269594 | 1 , 10
-Nouval Ainun Najib  |  1806269783 | 4 ,9
+Nouval Ainun Nadjib  |  1806269783 | 4 ,9
 Tommy Aji Prabowo | 1806269820 | 7
-Wiyata Mandala Putra  | 1806269833 | 10 , 11
+Wiyata Mandalaputra  | 1806269833 | 10 , 11
 
 Kontrak Tahap 3 Tugas Akhir
                     
 NPM  | Nama Lengkap | Fitur Yang diselesaikan
 ------------- | ------------- |-------------
 Ahmad Jaelani Sidiq  | 1806269594 | 12 , 14
-Nouval Ainun Najib  |  1806269783 | 5 , 6
+Nouval Ainun Nadjib  |  1806269783 | 5 , 6
 Tommy Aji Prabowo | 1806269820 | 8, 15 
-Wiyata Mandala Putra  | 1806269833 | 13 
+Wiyata Mandalaputra  | 1806269833 | 13 
 
 
 #List Feature Sistem Informasi Koperasi
