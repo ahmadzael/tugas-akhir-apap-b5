@@ -1,13 +1,9 @@
-# tugas-akhir-apap-b5
-Tugas akhir apap 
+# Kelompok 5 - Sistem Informasi Koperasi
 
-Kelompok 5 - Sistem Informasi Koperasi
-
-Ketua Kelompok : 
-
--Ahmad Jaelani Sidiq -1806269594
 
 Anggota Kelompok : 
+
+-Ahmad Jaelani Sidiq -1806269594
 
 -Nouval Ainun Najib - 1806269783
 
