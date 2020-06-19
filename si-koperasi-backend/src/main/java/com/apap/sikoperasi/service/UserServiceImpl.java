@@ -19,6 +19,11 @@ public class UserServiceImpl implements UserService {
 		
 	}
 
+	@Override
+	public UserModel getUserByUsername(String username) {
+		return userDB.getUserByUsername(username);
+	}
+
 	/*
 	 * @Override public UserModel getUserByUUID(String uuid) { return
 	 * userDB.getUserByUUID(uuid); }

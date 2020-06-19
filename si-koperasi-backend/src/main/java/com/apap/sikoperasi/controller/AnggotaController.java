@@ -76,7 +76,15 @@ public class AnggotaController {
 		return anggotaService.getAnggotaByID(id).get();
 	}
 	
-
+	
+	@GetMapping("/login/{username}&{password}")
+	public UserModel Login(@PathVariable String username, @PathVariable String password) {
+		UserModel  user = userservice.getUserByUsername(username);
+		if(user != null && user.getPassword().equals(password)) {
+			return user;
+		}
+		return null;
+	}
 	
 	
 	

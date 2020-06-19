@@ -8,4 +8,5 @@ import com.apap.sikoperasi.model.UserModel;
 @Repository
 public interface UserDB extends JpaRepository<UserModel,Long> {
 	//UserModel getUserByUUID(String uuid);
+	UserModel getUserByUsername(String username);
 }
