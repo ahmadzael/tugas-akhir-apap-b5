@@ -1,5 +1,6 @@
 // Header.js
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Sidebar extends Component {
     render(){
@@ -37,54 +38,54 @@ export default class Sidebar extends Component {
 
     <ul className="nav nav-list">
         <li className="">
-            <a href="index.html">
+            <Link to='/Home' className='active-border'>
                 <span className="menu-text"> Home </span>
-            </a>
+            </Link>
 
             <b className="arrow"></b>
         </li>
         <li className="">
-            <a href="index.html">
+            <Link to='/Profile' className='active-border'>
                 <span className="menu-text"> Profile </span>
-            </a>
+            </Link>
 
             <b className="arrow"></b>
         </li>
 
         <li className="">
-            <a href="index.html">
+            <Link to='/Pinjaman' className='active-border'>
             
                 <span className="menu-text"> Pinjaman </span>
-            </a>
+            </Link>
 
             <b className="arrow"></b>
         </li>
 
 
         <li className="">
-            <a href="index.html">
+            <Link to='/Simpanan' className='active-border'>
             
                 <span className="menu-text"> Simpanan </span>
-            </a>
+            </Link>
 
             <b className="arrow"></b>
         </li>
 
         <li className="active open">
-            <a href="#" className="dropdown-toggle">
+            <Link to='/Anggota' className="dropdown-toggle">
             
                 <span className="menu-text"> Anggota </span>
-            </a>
+            </Link>
 
             <b className="arrow"></b>
 
         </li>
 
         <li className="">
-            <a href="index.html">
+            <Link to='/Laporan' className='active-border'>
             
                 <span className="menu-text"> Laporan </span>
-            </a>
+            </Link>
 
             <b className="arrow"></b>
         </li>

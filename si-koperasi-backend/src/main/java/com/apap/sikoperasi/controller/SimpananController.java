@@ -17,7 +17,7 @@ public class SimpananController {
 	@Autowired
 	private SimpananService simpananService;
 	
-	@GetMapping("/getsimpanan/{uuid}")
+	@GetMapping("/getsimpanan/{id}")
 	public List<SimpananModel> getSimpananByID(@PathVariable String id){
 		return simpananService.getSimpananByID(id);
 	}
@@ -26,4 +26,6 @@ public class SimpananController {
 	public SimpananModel addSimpanan(@RequestBody SimpananModel newSimpanan){
 		return simpananService.addSimpanan(newSimpanan);
 	}
+	
+	@PutMapping("/updateSimpanan/{id}")
 }

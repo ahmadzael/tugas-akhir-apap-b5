@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-const COURSE_NAME = 'GetAllAnggota'
-const COURSE_API_URL = 'http://35.240.218.160:4003/'
-const COURSE_NAME_API_URL =  `${COURSE_API_URL}/rpc/${COURSE_NAME}`
+const COURSE_NAME = 'getAlluser'
+const COURSE_API_URL = 'http://localhost:8080'
+const COURSE_NAME_API_URL =  `${COURSE_API_URL}/${COURSE_NAME}`
 
 class CourseDataService {
     retrieveAllCourse(name){
