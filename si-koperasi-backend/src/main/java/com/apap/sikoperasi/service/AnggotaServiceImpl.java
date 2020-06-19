@@ -31,7 +31,6 @@ public class AnggotaServiceImpl implements AnggotaService {
 
 	@Override
 	public Optional<AnggotaModel> getAnggotaByID(long idAnggota) {
-		// TODO Auto-generated method stub
 		return anggotaDB.findById(idAnggota);
 	}
 	
