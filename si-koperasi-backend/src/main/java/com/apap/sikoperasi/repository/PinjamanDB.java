@@ -7,5 +7,4 @@ import com.apap.sikoperasi.model.PinjamanModel;
 
 @Repository
 public interface PinjamanDB extends JpaRepository<PinjamanModel,Long>{
-
 }
