@@ -1,214 +1,287 @@
 // Header.js
-import React, {Component} from 'react';
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react'
+import axios from 'axios'
 
 export default class Login extends Component {
-    render(){
-        return (
-<body class="login-layout light-login">
-		<div class="main-container">
-			<div class="main-content">
-				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1">
-						<div class="login-container">
-							<div class="center">
-								<h1>
-									<span class="red">SISTEM INFORMASI</span>
-									<span class="Grey" id="id-text2">KOPERASI</span>
-								</h1>
-							</div>
-
-							<div class="space-6"></div>
-
-							<div class="position-relative">
-								<div id="login-box" class="login-box visible widget-box no-border">
-									<div class="widget-body">
-										<div class="widget-main">
-											<h4 class="header blue lighter bigger">
-
-												Masukan Username dan Password Untuk Login
-											</h4>
-
-											<div class="space-6"></div>
-
-											<form>
-												<fieldset>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
-															<i class="ace-icon fa fa-user"></i>
-														</span>
-													</label>
-
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
-															<i class="ace-icon fa fa-lock"></i>
-														</span>
-													</label>
-
-													<div class="space"></div>
-
-													<div class="clearfix">
-														<label class="inline">
-															<input type="checkbox" class="ace" />
-															<span class="lbl"> Remember Me</span>
-														</label>
-                                                        
-                                                        <Link to='/home'>
-														<button type="button" class="width-35 pull-right btn btn-sm btn-primary">
-															<i class="ace-icon fa fa-key"></i>
-															<span class="bigger-110">Login</span>
-														</button>
-                                                        </Link>
-													</div>
-
-													<div class="space-4"></div>
-												</fieldset>
-											</form>
-
-										</div>
-
-										<div class="toolbar clearfix">
-											<div>
-												<a href="#" data-target="#forgot-box" class="forgot-password-link">
-													
-												
-												</a>
-											</div>
-
-										</div>
-									</div>
-								</div>
-
-								<div id="forgot-box" class="forgot-box widget-box no-border">
-									<div class="widget-body">
-										<div class="widget-main">
-											<h4 class="header red lighter bigger">
-												<i class="ace-icon fa fa-key"></i>
-												Retrieve Password
-											</h4>
-
-											<div class="space-6"></div>
-											<p>
-												Enter your email and to receive instructions
-											</p>
-
-											<form>
-												<fieldset>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
-															<i class="ace-icon fa fa-envelope"></i>
-														</span>
-													</label>
-
-													<div class="clearfix">
-														<button type="button" class="width-35 pull-right btn btn-sm btn-danger">
-															<i class="ace-icon fa fa-lightbulb-o"></i>
-															<span class="bigger-110">Send Me!</span>
-														</button>
-													</div>
-												</fieldset>
-											</form>
-										</div>
-
-										<div class="toolbar center">
-											<a href="#" data-target="#login-box" class="back-to-login-link">
-												Back to login
-												<i class="ace-icon fa fa-arrow-right"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-
-								<div id="signup-box" class="signup-box widget-box no-border">
-									<div class="widget-body">
-										<div class="widget-main">
-											<h4 class="header green lighter bigger">
-												<i class="ace-icon fa fa-users blue"></i>
-												New User Registration
-											</h4>
-
-											<div class="space-6"></div>
-											<p> Enter your details to begin: </p>
-
-											<form>
-												<fieldset>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
-															<i class="ace-icon fa fa-envelope"></i>
-														</span>
-													</label>
-
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
-															<i class="ace-icon fa fa-user"></i>
-														</span>
-													</label>
-
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
-															<i class="ace-icon fa fa-lock"></i>
-														</span>
-													</label>
-
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Repeat password" />
-															<i class="ace-icon fa fa-retweet"></i>
-														</span>
-													</label>
-
-													<label class="block">
-														<input type="checkbox" class="ace" />
-														<span class="lbl">
-															I accept the
-															<a href="#">User Agreement</a>
-														</span>
-													</label>
-
-													<div class="space-24"></div>
-
-													<div class="clearfix">
-														<button type="reset" class="width-30 pull-left btn btn-sm">
-															<i class="ace-icon fa fa-refresh"></i>
-															<span class="bigger-110">Reset</span>
-														</button>
-
-														<button type="button" class="width-65 pull-right btn btn-sm btn-success">
-															<span class="bigger-110">Register</span>
-
-															<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
-														</button>
-													</div>
-												</fieldset>
-											</form>
-										</div>
-
-										<div class="toolbar center">
-											<a href="#" data-target="#login-box" class="back-to-login-link">
-												<i class="ace-icon fa fa-arrow-left"></i>
-												Back to login
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-	</body>
-
-
-        )
+  constructor(props) {
+    super(props)
+    this.state = {
+      username: '',
+      password: '',
+      nama: '',
+      tempatLahir: '',
+      tanggalLahir: '',
+      alamat: '',
+      telepon: '',
+      isLogin: true,
     }
+  }
+
+  onLogin = () => {
+    let url  = `http://localhost:2016/user/view/${this.state.username}&${this.state.password}`
+    axios.get(url).then(resp => {
+      if (resp)  {
+        this.props.history.push('/home')
+      } else {
+        alert('failed login')
+      }
+    }).catch(err => {
+      console.log(err)
+      alert('failed login')
+    })
+
+  }
+
+  onRegister = () => {
+    let user = {
+      username: this.state.username,
+      password: this.state.password
+    }
+    let url = `http://localhost:2016/user/add`
+    axios.post(url, user).then(resp => {
+      if (resp)  {
+        alert('success register')
+      } else {
+        alert('failed register')
+      }
+    }).catch(err => {
+      console.log(err)
+      alert('failed register')
+    })
+    this.setState({ isLogin: true })
+  }
+
+  signIn = () => {
+    return (
+      <div id='login-box' className='login-box visible widget-box no-border'>
+        <div className='widget-body'>
+          <div className='widget-main'>
+            <div className='header blue lighter bigger'></div>
+            <div className='space-6'></div>
+            <fieldset>
+              <label className='block clearfix'>
+                <span className='block input-icon input-icon-right'>
+                  <input
+                    type='text'
+                    placeholder='Username'
+                    className='form-control'
+                    value={this.state.username}
+                    onChange={(field) => this.setState({ username: field.target.value })}
+                  />
+                  <i className='ace-icon fa fa-user'></i>
+                </span>
+              </label>
+
+              <label className='block clearfix'>
+                <span className='block input-icon input-icon-right'>
+                  <input
+                    type='password'
+                    className='form-control'
+                    placeholder='Password'
+                    value={this.state.password}
+                    onChange={(field) => this.setState({ password: field.target.value })}
+                  />
+                  <i className='ace-icon fa fa-lock'></i>
+                </span>
+              </label>
+
+              <div className='space'></div>
+
+              <div className='clearfix'>
+              <button
+                  type='button'
+                  onClick={() => this.onLogin()}
+                  className='width-35 pull-right btn btn-sm btn-primary'
+                >
+                  <i className='ace-icon fa fa-key'></i>
+                  <span className='bigger-110'>Login</span>
+                </button>
+                <button
+                  style={{ marginRight: 20 }}
+                  type='button'
+                  onClick={() => this.setState({ isLogin: false })}
+                  className='width-35 pull-right btn btn-sm btn-primary'
+                >
+                  <i className='ace-icon fa fa-arrow-right'></i>
+                  <span className='bigger-110'>Register</span>
+                </button>
+              </div>
+
+              <div className='space-4'></div>
+            </fieldset>
+          </div>
+
+          <div className='toolbar clearfix'>
+            <div className='forgot-password-link' style={{ height: 40 }}></div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  signUp = () => {
+    return (
+      <div id='signup-box' className='signup-box no-border'>
+        <div className='widget-body'>
+          <div className='widget-main' style={{ textAlign: 'center' }}>
+            <h4 className='header green lighter bigger'>
+              <i className='ace-icon fa fa-users blue'></i>
+              Registration
+            </h4>
+
+            <div className='space-6'></div>
+            <p> Enter your details: </p>
+            <fieldset>
+              <label className='block clearfix'>
+                <span className='block input-icon input-icon-right'>
+                  <input
+                    type='text'
+                    className='form-control'
+                    placeholder='Username'
+                    value={this.state.username}
+                    onChange={(field) => this.setState({ username: field.target.value })}
+                  />
+                  <i className='ace-icon fa fa-user'></i>
+                </span>
+              </label>
+
+              <label className='block clearfix'>
+                <span className='block input-icon input-icon-right'>
+                  <input
+                    type='password'
+                    className='form-control'
+                    placeholder='Password'
+                    value={this.state.password}
+                    onChange={(field) => this.setState({ password: field.target.value })}
+                  />
+                  <i className='ace-icon fa fa-lock'></i>
+                </span>
+              </label>
+
+              <label className='block clearfix'>
+                <span className='block input-icon input-icon-right'>
+                  <input
+                    type='text'
+                    className='form-control'
+                    placeholder='Nama'
+                    value={this.state.nama}
+                    onChange={(field) => this.setState({ nama: field.target.value })}
+                  />
+                  <i className='ace-icon fa fa-lock'></i>
+                </span>
+              </label>
+
+              <label className='block clearfix'>
+                <span className='block input-icon input-icon-right'>
+                  <input
+                    type='text'
+                    className='form-control'
+                    placeholder='Tempat Lahir'
+                    value={this.state.tempatLahir}
+                    onChange={(field) => this.setState({ tempatLahir: field.target.value })}
+                  />
+                  <i className='ace-icon fa fa-lock'></i>
+                </span>
+              </label>
+
+              <label className='block clearfix'>
+                <span className='block input-icon input-icon-right'>
+                  <input
+                    type='date'
+                    className='form-control'
+                    placeholder='Tanggal Lahir'
+                    value={this.state.tanggalLahir}
+                    onChange={(field) => this.setState({ tanggalLahir: field.target.value })}
+                  />
+                  <i className='ace-icon fa fa-lock'></i>
+                </span>
+              </label>
+
+              <label className='block clearfix'>
+                <span className='block input-icon input-icon-right'>
+                  <input
+                    type='text'
+                    className='form-control'
+                    placeholder='Alamat'
+                    value={this.state.alamat}
+                    onChange={(field) => this.setState({ alamat: field.target.value })}
+                  />
+                  <i className='ace-icon fa fa-lock'></i>
+                </span>
+              </label>
+
+              <label className='block clearfix'>
+                <span className='block input-icon input-icon-right'>
+                  <input
+                    type='text'
+                    className='form-control'
+                    placeholder='Telepon'
+                    value={this.state.telepon}
+                    onChange={(field) => this.setState({ telepon: field.target.value })}
+                  />
+                  <i className='ace-icon fa fa-lock'></i>
+                </span>
+              </label>
+
+              <div className='space-24'></div>
+
+              <div className='clearfix'>
+                <button type='reset' className='width-30 pull-left btn btn-sm'
+                  onClick={() => this.setState({ isLogin: true })}
+                >
+                  <i className='ace-icon fa fa-refresh'></i>
+                  <span className='bigger-110'>Cancel</span>
+                </button>
+                <button
+                  type='button'
+                  className='width-65 pull-right btn btn-sm btn-success'
+                  onClick={() => this.onRegister()}
+                >
+                  <span className='bigger-110'>Register</span>
+
+                  <i className='ace-icon fa fa-arrow-right icon-on-right'></i>
+                </button>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  render() {
+    return (
+      <div className='login-layout light-login'>
+        <div className='main-container'>
+          <div className='main-content'>
+            <div className='row'>
+              <div
+                className='col-sm-10 col-sm-offset-1'
+                style={{ height: window.innerHeight, marginTop: 150 }}
+              >
+                <div className='login-container' style={{ width: window.innerWidth * 0.2 }}>
+                  <div className='center'>
+                    <h1>
+                      <span className='red'>SISTEM INFORMASI</span>
+                      <br />
+                      <span className='Grey' id='id-text2'>
+                        KOPERASI
+                      </span>
+                    </h1>
+                  </div>
+
+                  <div className='space-6'></div>
+
+                  <div className='position-relative'>
+                    {this.state.isLogin && this.signIn()}
+                    {!this.state.isLogin && this.signUp()}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }

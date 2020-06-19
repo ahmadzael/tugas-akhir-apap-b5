@@ -11,7 +11,7 @@ export default class Home extends Component {
             <div>
             <Navbar/>
             <div className="main-container ace-save-state" id="main-container">
-            <Sidebar/> 
+            <Sidebar {...this.props}/> 
             <Anggota/>
             <Footer />
             </div>
