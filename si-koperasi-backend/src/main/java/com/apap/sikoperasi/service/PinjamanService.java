@@ -9,7 +9,9 @@ import com.apap.sikoperasi.model.PinjamanModel;
 public interface PinjamanService {
 	PinjamanModel addPinjaman(PinjamanModel pinjaman);
 	List<PinjamanModel> getPinjamanByAnggota(Optional<AnggotaModel> anggota);
-	PinjamanModel getPinjamanByID(int id);
+	Optional<PinjamanModel> getPinjamanByID(long pinjamanID);
 	PinjamanModel updatePinjaman(PinjamanModel pinjaman,int id);
 	List<PinjamanModel> getPinjamanByAnggota(AnggotaModel anggota);
+	
+	List<PinjamanModel> getAllPinjaman();
 }

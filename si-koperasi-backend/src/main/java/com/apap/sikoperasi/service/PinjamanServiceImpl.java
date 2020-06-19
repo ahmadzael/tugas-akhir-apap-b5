@@ -30,9 +30,9 @@ public class PinjamanServiceImpl implements PinjamanService {
 	}
 
 	@Override
-	public PinjamanModel getPinjamanByID(int id) {
+	public Optional<PinjamanModel> getPinjamanByID(long id) {
 		// TODO Auto-generated method stub
-		return null;
+		return pinjamanDB.findById(id);
 	}
 
 	@Override
@@ -44,6 +44,12 @@ public class PinjamanServiceImpl implements PinjamanService {
 	public List<PinjamanModel> getPinjamanByAnggota(Optional<AnggotaModel> anggota) {
 		// TODO Auto-generated method stub
 		return pinjamanDB.findByAnggota(anggota);
+	}
+
+	@Override
+	public List<PinjamanModel> getAllPinjaman() {
+		// TODO Auto-generated method stub
+		return pinjamanDB.findAll();
 	}
 
 }

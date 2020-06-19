@@ -70,6 +70,46 @@ public class AnggotaModel implements Serializable {
      
     @OneToMany(mappedBy = "anggota", fetch = FetchType.LAZY)
     private List<PinjamanModel> listPeminjaman = new ArrayList<PinjamanModel>();
+    
+	@OneToMany(mappedBy = "penyetor", fetch = FetchType.LAZY)
+    private List<SimpananModel> listPenyeetor = new ArrayList<SimpananModel>();
+    
+    @OneToMany(mappedBy = "penerima", fetch = FetchType.LAZY)
+    private List<SimpananModel> listPenerima = new ArrayList<SimpananModel>();
+    
+    public UserModel getUsers() {
+		return users;
+	}
+
+	public void setUsers(UserModel users) {
+		this.users = users;
+	}
+
+	public List<PinjamanModel> getListPeminjaman() {
+		return listPeminjaman;
+	}
+
+	public void setListPeminjaman(List<PinjamanModel> listPeminjaman) {
+		this.listPeminjaman = listPeminjaman;
+	}
+
+	public List<SimpananModel> getListPenyeetor() {
+		return listPenyeetor;
+	}
+
+	public void setListPenyeetor(List<SimpananModel> listPenyeetor) {
+		this.listPenyeetor = listPenyeetor;
+	}
+
+	public List<SimpananModel> getListPenerima() {
+		return listPenerima;
+	}
+
+	public void setListPenerima(List<SimpananModel> listPenerima) {
+		this.listPenerima = listPenerima;
+	}
+
+
 
 	public long getId() {
 		return id;

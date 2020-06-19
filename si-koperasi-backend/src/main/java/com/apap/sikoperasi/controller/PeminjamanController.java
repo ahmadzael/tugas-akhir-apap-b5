@@ -20,42 +20,56 @@ import com.apap.sikoperasi.service.PinjamanService;
 public class PeminjamanController {
 	@Autowired
 	private PinjamanService pinjamanService;
+	
+	@Autowired
 	private AnggotaService anggotaService;
 	
 	
-	  @GetMapping("/GetPinjamanPerUser") public List<PinjamanModel>
-	  GetPinjamanPerUser(@PathVariable long idAnggota){ 
-		  Optional<AnggotaModel> anggota = anggotaService.getAnggotaByID(idAnggota);
-		  return pinjamanService.getPinjamanByAnggota(anggota); 
-		  }
-	 
+	@GetMapping("/getPinjamanPerUser") public List<PinjamanModel>
+	GetPinjamanPerUser(@PathVariable long idAnggota){ 
+	  Optional<AnggotaModel> anggota = anggotaService.getAnggotaByID(idAnggota);
+	  return pinjamanService.getPinjamanByAnggota(anggota); 
+  	}
 	
-	@GetMapping("/GetPinjamanByID")
-	public PinjamanModel getPinjamanByID(@PathVariable int pinjamanID){
-		return pinjamanService.getPinjamanByID(pinjamanID);
+	 
+	@GetMapping("/getAllPinjaman")
+	public List<PinjamanModel> getPinjamanByID(){
+		return pinjamanService.getAllPinjaman();
+	}
+		
+	@GetMapping("/getPinjamanByID/{pinjamanID}")
+	public PinjamanModel getPinjamanByID(@PathVariable long pinjamanID){
+		return pinjamanService.getPinjamanByID(pinjamanID).get();
 	}
 	
-	@PostMapping("/addPinjaman")
-	public PinjamanModel addPinjaman(@RequestBody PinjamanModel newPinjaman){
+	@PostMapping("/addPinjaman/{anggotaID}")
+	public PinjamanModel addPinjaman(@PathVariable int anggotaID,@RequestBody PinjamanModel newPinjaman){
+		AnggotaModel anggota = anggotaService.getAnggotaByID(anggotaID).get();
+		newPinjaman.setAnggota(anggota);
 		return pinjamanService.addPinjaman(newPinjaman);
 	}
 	
-	@PutMapping("/updatePinjaman/{pinjamanId}")
-	public String updatePinjaman(@PathVariable int pinjamanID, @RequestBody PinjamanModel newPinjaman){
-		PinjamanModel loan = pinjamanService.getPinjamanByID(pinjamanID);
-		if (loan.equals(null)) {
-			return "error boi";
-		}
+	@PutMapping("/updatePinjaman/{anggotaID}")
+	public PinjamanModel updatePinjaman(@PathVariable int anggotaID, @RequestBody PinjamanModel newPinjaman){
+		PinjamanModel pinjam = pinjamanService.getPinjamanByID(newPinjaman.getId()).get();
+		AnggotaModel anggota = anggotaService.getAnggotaByID(anggotaID).get();
+		/*
+		 * if (pinjam.equals(null)) { return "error boi"; }
+		 */
 		
-		loan.setJumlahPengembalian(newPinjaman.getJumlahPengembalian());
-		loan.setStatus(newPinjaman.getStatus());
-		loan.setTanggalDisetujui(newPinjaman.getTanggalDisetujui());
-		loan.setTanggalPengembalian(newPinjaman.getTanggalPengembalian());
-		loan.setJumlahPengembalian(newPinjaman.getJumlahPengembalian());
+		pinjam.setJumlahPengembalian(newPinjaman.getJumlahPengembalian());
+		pinjam.setStatus(newPinjaman.getStatus());
+		pinjam.setTanggalDisetujui(newPinjaman.getTanggalDisetujui());
+		pinjam.setTanggalPengembalian(newPinjaman.getTanggalPengembalian());
+		pinjam.setJumlahPengembalian(newPinjaman.getJumlahPengembalian());
+		pinjam.setAnggota(anggota);
 		
-		pinjamanService.updatePinjaman(loan, pinjamanID);
 		
-		return "updated";
+		
+		
+		return pinjamanService.addPinjaman(pinjam);
 	}
 
 }
+
+

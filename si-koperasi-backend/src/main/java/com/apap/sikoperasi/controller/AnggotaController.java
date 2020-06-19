@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.apap.sikoperasi.model.AnggotaModel;
 import com.apap.sikoperasi.model.PinjamanModel;
+import com.apap.sikoperasi.model.SimpananModel;
 import com.apap.sikoperasi.model.UserModel;
 import com.apap.sikoperasi.service.AnggotaService;
 import com.apap.sikoperasi.service.UserService;
@@ -48,11 +49,11 @@ public class AnggotaController {
 	}
 	
 	@PutMapping("/updateAnggota/{anggotaID}")
-	public String updateAnggota(@PathVariable long anggotaID, @RequestBody AnggotaModel newAnggota) {
+	public AnggotaModel updateAnggota(@PathVariable long anggotaID, @RequestBody AnggotaModel newAnggota) {
 		AnggotaModel anggota = anggotaService.getAnggotaByID(anggotaID).get();
-		if (anggota.equals(null)) {
-			return "error";
-		}
+		/*
+		 * if (anggota.equals(null)) { return "error"; }
+		 */
 		
 		anggota.setNama(newAnggota.getNama());
 		anggota.setAlamat(newAnggota.getAlamat());
@@ -62,17 +63,20 @@ public class AnggotaController {
 		anggota.setTelepon(newAnggota.getTelepon());
 		anggota.setTempatLahir(newAnggota.getTempatLahir());
 		anggota.setUser(newAnggota.getUser());
+		
 
-		return "berhasil";
+		return anggotaService.addAnggota(anggota);
 		
 	}
 	
 
 	
-//	@GetMapping("/anggota/{uuid}")
-//	public UserModel getAnggotaByUUID(@PathVariable String uuid) {
-//		return null;
-//	}
+	@GetMapping("/anggota/{id}")
+	public AnggotaModel getAnggotaByUUID(@PathVariable long id) {
+		return anggotaService.getAnggotaByID(id).get();
+	}
+	
+
 	
 	
 	
