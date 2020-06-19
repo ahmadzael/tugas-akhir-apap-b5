@@ -30,7 +30,7 @@ public class PeminjamanController {
 		  }
 	 
 	
-	@GetMapping("/GetPinjamanPerUser")
+	@GetMapping("/GetPinjamanByID")
 	public PinjamanModel getPinjamanByID(@PathVariable int pinjamanID){
 		return pinjamanService.getPinjamanByID(pinjamanID);
 	}

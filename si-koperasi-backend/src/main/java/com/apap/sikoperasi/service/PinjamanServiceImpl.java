@@ -43,7 +43,7 @@ public class PinjamanServiceImpl implements PinjamanService {
 	@Override
 	public List<PinjamanModel> getPinjamanByAnggota(Optional<AnggotaModel> anggota) {
 		// TODO Auto-generated method stub
-		return null;
+		return pinjamanDB.findByAnggota(anggota);
 	}
 
 }

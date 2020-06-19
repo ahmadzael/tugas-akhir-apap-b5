@@ -9,6 +9,6 @@ import com.apap.sikoperasi.model.AnggotaModel;
 
 @Repository
 public interface AnggotaDB extends JpaRepository<AnggotaModel,Long>{
-	 Optional<AnggotaModel> findByFlightNumber(AnggotaModel anggota);
+
 
 }
